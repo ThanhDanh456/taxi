@@ -1,0 +1,629 @@
+:root {
+  color-scheme: light;
+  --bg: #f3f9fb;
+  --surface: #ffffff;
+  --surface-alt: #eef7fb;
+  --text: #0f172a;
+  --muted: #52606d;
+  --accent: #0f766e;
+  --accent-dark: #07564f;
+  --border: rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  background: radial-gradient(circle at top, rgba(15, 118, 110, 0.12), transparent 25%),
+    var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar {
+  width: 100%;
+  background: var(--accent);
+  color: #f8fafc;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+}
+
+.topbar-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 72px;
+}
+
+.topbar-inner nav {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-inner nav {
+  margin-left: auto;
+}
+
+.topnav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.topnav-links li {
+  list-style: none;
+}
+
+.topnav-links a {
+  color: #f8fafc;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+.page-shell {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.hero-inner {
+  padding: 120px 0 96px;
+}
+
+.topnav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topnav-links a {
+  color: #fff;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.home-icon a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+}
+
+.home-icon svg {
+  color: #fff;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.32);
+  padding: 6px;
+}
+
+.topnav-links a:hover {
+  opacity: 0.8;
+}
+
+.pricing {
+  padding: 48px 0;
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.pricing-card h3 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 2rem;
+  color: var(--accent);
+  margin: 14px 0;
+  font-weight: 800;
+}
+
+.contact-badges {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  display: grid;
+  gap: 14px;
+  z-index: 40;
+}
+
+.zalo-widget,
+.hotline-widget {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.zalo-widget {
+  background: #0f766e;
+}
+
+
+.zalo-icon svg {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+}
+
+.hotline-widget {
+  background: linear-gradient(135deg, #2563eb, #0f766e);
+}
+
+.zalo-widget span,
+.hotline-widget span {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.hotline-widget span {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  border-radius: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.2));
+  z-index: 1;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  right: -20%;
+  top: 10%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.14), transparent 55%);
+  pointer-events: none;
+}
+
+.hero-content,
+
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 0;
+  max-width: 100%;
+}
+
+.hero-copy {
+  max-width: 760px;
+}
+
+.hero-description {
+  max-width: 620px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.18);
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 4vw, 4.4rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.hero h1 span {
+  display: block;
+  margin-top: 10px;
+}
+
+.hero p {
+  max-width: 700px;
+  line-height: 1.9;
+  color: #f8fafc;
+  margin: 28px 0;
+  font-size: 1.1rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.hero-stat {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 16px 18px;
+  font-weight: 700;
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: var(--accent);
+  color: #f8fafc;
+}
+
+.secondary {
+  border: 1px solid rgba(82, 96, 109, 0.18);
+  color: var(--text);
+}
+
+.hero-card {
+  display: none;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 360px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.hero-card-text {
+  text-align: center;
+}
+
+.hero-card-text strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.hero-card-text p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.car-card-icon {
+  width: 100%;
+  height: 220px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 24px;
+}
+
+.car-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 24px;
+}
+
+.section-title h2 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.section-title p {
+  margin: 0;
+  max-width: 680px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.features,
+.service-overview,
+.why-choose,
+.cars,
+.testimonial-section,
+.contact {
+  padding: 48px 0;
+}
+
+.why-choose {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.why-choose .feature-card {
+  background: linear-gradient(180deg, rgba(15, 118, 110, 0.12), var(--surface));
+}
+
+.feature-grid,
+.cars-grid,
+.testimonials,
+.contact-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.feature-card,
+.car-card,
+.testimonial-card,
+.contact-card,
+.highlight-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 26px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover,
+.car-card:hover,
+.testimonial-card:hover,
+.contact-card:hover,
+.highlight-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(15, 118, 110, 0.18);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+}
+
+.feature-card h3,
+.car-card h3,
+.highlight-card h3,
+.contact-card h3 {
+  margin-top: 0;
+}
+
+.feature-card p,
+.car-card p,
+.testimonial-card p,
+.contact-card p,
+.service-text p,
+.service-text li {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.service-overview {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.service-text ul {
+  padding-left: 18px;
+  margin: 20px 0 0;
+}
+
+.service-text li {
+  margin-bottom: 10px;
+}
+
+.service-highlights {
+  display: grid;
+  gap: 20px;
+}
+
+.cars-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.testimonials {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.testimonial-card {
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '“';
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 4rem;
+  color: rgba(15, 118, 110, 0.25);
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.contact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  padding-top: 24px;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 980px) {
+  .hero-inner {
+    padding: 84px 0 72px;
+  }
+
+  .topbar-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .topnav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pricing-grid,
+  .feature-grid,
+  .cars-grid,
+  .testimonials,
+  .contact-grid,
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .topnav-links {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .hero-inner {
+    padding: 64px 0 56px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 7vw, 3.4rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-stats,
+  .pricing-grid,
+  .feature-grid,
+  .cars-grid,
+  .testimonials,
+  .contact-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell {
+    padding: 0 18px 32px;
+  }
+
+
+  .contact-badges {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    grid-template-columns: 1fr;
+  }
+
+  .zalo-widget,
+  .hotline-widget {
+    justify-content: center;
+  }
+}

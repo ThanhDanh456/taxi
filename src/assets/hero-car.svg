@@ -1,0 +1,30 @@
+<svg width="800" height="520" viewBox="0 0 800 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="car-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="window-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="800" height="520" rx="36" fill="#111827"/>
+  <circle cx="160" cy="120" r="104" fill="rgba(245,158,11,0.16)"/>
+  <circle cx="660" cy="100" r="40" fill="rgba(96,165,250,0.18)"/>
+  <path d="M148 376H652C668.568 376 682 362.568 682 346V264C682 247.432 668.568 234 652 234H148C131.432 234 118 247.432 118 264V346C118 362.568 131.432 376 148 376Z" fill="url(#car-grad)"/>
+  <path d="M118 286H682V258H118V286Z" fill="#f8fafc" opacity="0.15"/>
+  <path d="M160 234H620V204C620 186.774 607.226 174 590 174H190C172.774 174 160 186.774 160 204V234Z" fill="#fbbf24"/>
+  <path d="M210 172H430C441.046 172 450 180.954 450 192V220H210V192C210 180.954 218.954 172 230 172Z" fill="url(#window-grad)"/>
+  <path d="M190 204H590V234H190V204Z" fill="#fde68a"/>
+  <rect x="154" y="338" width="60" height="60" rx="30" fill="#111827"/>
+  <rect x="586" y="338" width="60" height="60" rx="30" fill="#111827"/>
+  <circle cx="184" cy="368" r="16" fill="#fff"/>
+  <circle cx="616" cy="368" r="16" fill="#fff"/>
+  <path d="M250 100C250 86.7452 261.745 75 275 75H340C353.255 75 365 86.7452 365 100V116H250V100Z" fill="#fff" opacity="0.9"/>
+  <path d="M460 294H540V322H460V294Z" fill="#fff" opacity="0.16"/>
+  <path d="M250 316H290V354H250V316Z" fill="#fff" opacity="0.1"/>
+  <path d="M510 316H550V354H510V316Z" fill="#fff" opacity="0.1"/>
+  <path d="M90 430C90 420.058 98.058 412 108 412H692C701.942 412 710 420.058 710 430C710 439.942 701.942 448 692 448H108C98.058 448 90 439.942 90 430Z" fill="rgba(255,255,255,0.08)"/>
+  <text x="160" y="480" fill="#f8fafc" font-family="Inter, sans-serif" font-size="32" font-weight="700">Taxi Hưng Yên</text>
+</svg>
