@@ -38,6 +38,12 @@ function App() {
     <div className="app-shell">
       <header className="topbar">
         <div className="page-shell topbar-inner">
+          <input id="nav-toggle" className="nav-toggle" type="checkbox" aria-hidden="true" />
+          <label htmlFor="nav-toggle" className="menu-toggle" aria-label="Mở menu">
+            <span className="bar" />
+            <span className="bar" />
+            <span className="bar" />
+          </label>
           <div className="brand">
             <img src={taxiIcon} alt="Taxi logo" />
             TAXI HƯNG YÊN

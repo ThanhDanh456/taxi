@@ -108,6 +108,31 @@ a {
   transition: opacity 0.2s ease;
 }
 
+/* Hamburger menu toggle (hidden by default) */
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
 .home-icon a {
   display: inline-flex;
   align-items: center;
@@ -132,8 +157,8 @@ a {
 }
 
 .brand img {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.32);
   padding: 6px;
@@ -799,6 +824,89 @@ a {
     gap: 12px;
   }
 
+  /* show hamburger and hide default links until toggled */
+  .menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #fff;
+  }
+
+  .topbar-inner nav {
+    position: relative;
+  }
+
+  .topnav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 12px;
+    width: 220px;
+    background: var(--surface);
+    color: var(--text);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 18px 38px rgba(15,23,42,0.12);
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .topnav-links li a {
+    color: var(--text);
+    padding: 8px 10px;
+    display: block;
+    font-weight: 700;
+  }
+
+  .nav-toggle:checked ~ nav .topnav-links {
+      display: flex;
+    }
+
+  /* Mobile header layout to match reference: hamburger left, logo centered, phone right */
+  @media (max-width: 720px) {
+    .topbar-inner {
+      position: relative;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .menu-toggle {
+      order: 0;
+      margin-left: 8px;
+    }
+
+    .brand {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    /* position hamburger on the far left so brand remains centered */
+    .menu-toggle {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* hide fixed contact badges on small screens to mirror reference */
+    .contact-badges {
+      display: none;
+    }
+  }
+
   .hero-inner {
     padding: 64px 0 56px;
   }
@@ -818,20 +926,127 @@ a {
   .testimonials,
   .contact-grid,
 
-  .page-shell {
-    padding: 0 18px 32px;
-  }
-
-
   .contact-badges {
     left: 12px;
     right: 12px;
     bottom: 12px;
-    grid-template-columns: 1fr;
+    /* switch to horizontal row to avoid vertical overlap with long content */
+    left: auto;
+    right: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
   }
 
   .zalo-widget,
   .hotline-widget {
     justify-content: center;
+  }
+}
+
+/* Additional mobile tweaks */
+@media (max-width: 720px) {
+  .contact-badges .facebook-widget,
+  .contact-badges .zalo-widget,
+  .contact-badges .hotline-widget {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 12px;
+    box-shadow: 0 10px 22px rgba(15,23,42,0.12);
+  }
+
+  .hero {
+    min-height: 420px;
+  }
+
+  .service-map {
+    min-height: 360px;
+  }
+
+  .car-card-icon {
+    max-height: 260px;
+    border-radius: 20px;
+  }
+
+  .car-card-icon img {
+    object-fit: cover;
+  }
+
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .feature-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .testimonial-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .testimonial-avatar {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 360px;
+    padding: 36px 0 32px;
+  }
+
+  .service-map {
+    min-height: 240px;
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .feature-icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .contact-badges {
+    right: 10px;
+    bottom: 10px;
+    gap: 10px;
+  }
+
+  .contact-badges .facebook-widget,
+  .contact-badges .zalo-widget,
+  .contact-badges .hotline-widget {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 10px;
+  }
+
+  .testimonial-cta .button {
+    min-width: 160px;
+  }
+
+  .page-shell {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .brand {
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 32px;
+    height: 32px;
   }
 }
