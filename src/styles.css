@@ -186,46 +186,39 @@ a {
   z-index: 40;
 }
 
+.facebook-widget,
 .zalo-widget,
 .hotline-widget {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 16px 22px;
-  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 50%;
   font-weight: 700;
   text-decoration: none;
   color: white;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+.facebook-widget {
+  background: #1877f2;
 }
 
 .zalo-widget {
-  background: #0f766e;
+  background: #0059ff;
 }
 
-
-.zalo-icon svg {
-  width: 18px;
-  height: 18px;
-  color: #fff;
+.facebook-widget svg,
+.zalo-widget svg,
+.hotline-widget svg {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .hotline-widget {
   background: linear-gradient(135deg, #2563eb, #0f766e);
-}
-
-.zalo-widget span,
-.hotline-widget span {
-  background: rgba(255, 255, 255, 0.18);
-  padding: 8px 12px;
-  border-radius: 999px;
-}
-
-.hotline-widget span {
-  background: rgba(255, 255, 255, 0.12);
-  padding: 8px 12px;
-  border-radius: 999px;
 }
 
 .hero {
@@ -459,6 +452,29 @@ a {
   border-radius: 24px;
   padding: 26px;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-card {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent);
+  font-size: 1.1rem;
 }
 
 .feature-card:hover,

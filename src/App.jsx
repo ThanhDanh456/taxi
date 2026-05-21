@@ -213,16 +213,36 @@ function App() {
           />
           <div className="contact-grid">
             <div className="contact-card">
-              <h3>Hotline</h3>
+              <div className="contact-card-header">
+                <span className="contact-icon" aria-hidden="true">📞</span>
+                <h3>Hotline</h3>
+              </div>
               <p><a href="tel:0372613123">0372 613 123</a></p>
             </div>
             <div className="contact-card">
-              <h3>Địa chỉ</h3>
+              <div className="contact-card-header">
+                <span className="contact-icon" aria-hidden="true">📍</span>
+                <h3>Địa chỉ</h3>
+              </div>
               <p>Phố Nối, Hưng Yên</p>
             </div>
             <div className="contact-card">
-              <h3>Email</h3>
+              <div className="contact-card-header">
+                <span className="contact-icon" aria-hidden="true">✉️</span>
+                <h3>Email</h3>
+              </div>
               <p>nguyenvanthiensangduyen@gmai.com</p>
+            </div>
+            <div className="contact-card">
+              <div className="contact-card-header">
+                <span className="contact-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 12C22 6.486 17.514 2 12 2S2 6.486 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.99H7.898v-2.888h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.772-1.63 1.562v1.875h2.773l-.443 2.888h-2.33v6.99C18.343 21.128 22 16.991 22 12z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <h3>Facebook</h3>
+              </div>
+              <p><a href="https://www.facebook.com/share/1b9kWnLMRA/?mibextid=wwXIfr" target="_blank" rel="noreferrer">Taxi Hưng Yên</a></p>
             </div>
           </div>
         </section>
@@ -233,11 +253,18 @@ function App() {
       </footer>
 
       <div className="contact-badges">
-        <a className="zalo-widget" href="https://zalo.me/0372613123" target="_blank" rel="noreferrer">
-          <span>Zalo</span>
+        <a className="facebook-widget" href="https://www.facebook.com/share/1b9kWnLMRA/?mibextid=wwXIfr" target="_blank" rel="noreferrer" aria-label="Facebook Taxi Hưng Yên">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 12C22 6.486 17.514 2 12 2S2 6.486 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.99H7.898v-2.888h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.772-1.63 1.562v1.875h2.773l-.443 2.888h-2.33v6.99C18.343 21.128 22 16.991 22 12z" fill="currentColor"/>
+          </svg>
         </a>
-        <a className="hotline-widget" href="tel:0372613123">
-          <span>Hotline</span> 0372 613 123
+        <a className="zalo-widget" href="https://zalo.me/0372613123" target="_blank" rel="noreferrer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.477 2 2 5.582 2 10c0 2.228 1.303 4.236 3.4 5.75L4 22l5-2.64c.661.2 1.388.34 2.1.34 5.523 0 10-3.582 10-8s-4.477-8-10-8zm1.16 12.64h-3.6l1.8-2.28-1.8-2.28h3.6v1.56H9.94l1.2 1.56-1.2 1.56h3.6v1.44z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a className="hotline-widget" href="tel:0372613123" aria-label="Hotline Taxi Hưng Yên">
+          <span aria-hidden="true">☎</span>
         </a>
       </div>
     </div>
