@@ -67,29 +67,24 @@ function App() {
       </section>
       
       <main className="page-shell">
-        <section className="service-overview" id="about">
-          <div className="service-text">
-            <SectionTitle
-              title="Giới thiệu Taxi Hưng Yên"
-              description="Chúng tôi phục vụ khách hàng cá nhân và doanh nghiệp với đội xe đa dạng 4 chỗ, 7 chỗ, 16 chỗ."
-            />
-            <p>
-              Với phương châm “Khách hàng là thượng đế”, Taxi Hưng Yên luôn cải tiến dịch vụ, đầu tư xe mới và đào tạo tài xế thân thiện. Chúng tôi có xe sân bay, ga tàu, bến xe và xe đi liên tỉnh.
-            </p>
-            <ul>
-              <li>Xe đời 2019-2024</li>
-              <li>Cung cấp nước suối, khăn lạnh</li>
-              <li>Giá cước minh bạch, không phát sinh</li>
-            </ul>
-          </div>
-          <div className="service-highlights">
-            <div className="highlight-card">
-              <h3>Khu vực chạy taxi</h3>
-              <p>Hưng Yên, Hà Nội, Vĩnh Phúc, Ninh Bình, Hải Dương, Thanh Hóa và nhiều tuyến liên tỉnh.</p>
+        <section className="intro-service">
+          <SectionTitle title="GIỚI THIỆU VỀ DỊCH VỤ CỦA CHÚNG TÔI" />
+          <div className="intro-content">
+            <div className="intro-features">
+              <h3>TỔNG ĐÀI TAXI HƯNG YÊN</h3>
+              <ul>
+                <li>🚕 HÃNG TAXI GIÁ RẺ UY TÍN TẠI HƯNG YÊN</li>
+                <li>🎁 GỌI CÓ XE LIỀN 5 ĐẾN 10 PHÚT</li>
+                <li>🚗 XE ĐỜI MỚI 2024 ĐẾN 2026</li>
+                <li>✈️ HỢP ĐỒNG ĐƯA ĐÓN KHÁCH SÂN BAY, GA TÀU, BẾN XE KHÁCH</li>
+                <li>🎯 ĐẶT XE TRƯỚC GIẢM GIÁ ĐÊM 30% KHÁCH ĐI LIÊN TỈNH</li>
+                <li>❄️ PHỤC VỤ NƯỚC SUỐI KHĂN LẠNH MIỄN PHÍ</li>
+                <li>✅ CAM KẾT GIÁ RẺ NHẤT HIỆN NAY"</li>
+              </ul>
+              <a href="tel:0372613123" className="button primary">Hotline: 0372 613 123</a>
             </div>
-            <div className="highlight-card">
-              <h3>Xe đa dạng</h3>
-              <p>5 chỗ, 7 chỗ, 16 chỗ cho gia đình, công ty và du lịch.</p>
+            <div className="intro-image">
+              <img src={heroImage} alt="Taxi Hưng Yên" />
             </div>
           </div>
         </section>
@@ -194,23 +189,23 @@ function App() {
               </div>
               <h3>Nguyễn Hoàng</h3>
               <div className="testimonial-rating">★★★★★</div>
-              <p>“Tôi rất ấn tượng với đội ngũ tài xế của Taxi Hưng Yên: đúng giờ, thân thiện và luôn hỗ trợ nhiệt tình. Chuyến đi của tôi trở nên dễ chịu và an tâm hơn.”</p>
+              <p>"Tôi rất ấn tượng với đội ngũ tài xế của Taxi Hưng Yên: đúng giờ, thân thiện và luôn hỗ trợ nhiệt tình. Chuyến đi của tôi trở nên dễ chịu và an tâm hơn."</p>
             </article>
             <article className="testimonial-card">
               <div className="testimonial-avatar">
                 <img src="https://images.hukumonline.com/frontend/lt688d03cc30a08/lt688d040d1ab0e.jpg" alt="Avatar Quốc Lập" />
               </div>
               <h3>Quốc Lập</h3>
-              <div className="testimonial-rating">★★★★★</div>
-              <p>“Giá cước rõ ràng, không phát sinh, dịch vụ hỗ trợ khách hàng nhanh chóng. Tôi luôn chọn Taxi Hưng Yên cho các chuyến công tác và đi chơi cùng gia đình.”</p>
+              <div className="testimonial-rating">★★★★</div>
+              <p>"Giá cước rõ ràng, không phát sinh, dịch vụ hỗ trợ khách hàng nhanh chóng. Tôi luôn chọn Taxi Hưng Yên cho các chuyến công tác và đi chơi cùng gia đình."</p>
             </article>
             <article className="testimonial-card">
               <div className="testimonial-avatar">
                 <img src="https://chcbiotech.com/theme/design/img/sub7/img1_2.jpg" alt="Avatar Trần Ngọc" />
               </div>
               <h3>Trần Ngọc</h3>
-              <div className="testimonial-rating">★★★★★</div>
-              <p>“Xe đời mới, nội thất sạch sẽ và chạy êm. Tôi rất yên tâm khi đặt xe cho cả gia đình đi du lịch tỉnh ngoài.”</p>
+              <div className="testimonial-rating">★★★★</div>
+              <p>"Xe đời mới, nội thất sạch sẽ và chạy êm. Tôi rất yên tâm khi đặt xe cho cả gia đình đi du lịch tỉnh ngoài."</p>
             </article>
             <article className="testimonial-card">
               <div className="testimonial-avatar">
@@ -218,12 +213,20 @@ function App() {
               </div>
               <h3>Lan Diễm</h3>
               <div className="testimonial-rating">★★★★★</div>
-              <p>“Dịch vụ đặt xe nhanh, tài xế hỗ trợ tận tâm và xe đến đúng giờ. Taxi Hưng Yên là lựa chọn đáng tin cậy cho mọi hành trình.”</p>
+              <p>"Dịch vụ đặt xe nhanh, tài xế hỗ trợ tận tâm và xe đến đúng giờ. Taxi Hưng Yên là lựa chọn đáng tin cậy cho mọi hành trình."</p>
             </article>
           </div>
           <div className="testimonial-cta">
-            <p>Nhận tư vấn và báo giá miễn phí ngay hôm nay.</p>
-            <a className="primary button" href="#contact">Báo giá miễn phí</a>
+            <div className="cta-icon">
+              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" fill="#ff6a00"/>
+              </svg>
+            </div>
+            <div className="cta-content">
+              <p className="cta-title">TƯ VẤN, BÁO GIÁ MIỄN PHÍ</p>
+              <p className="cta-subtitle">GỌI NGAY</p>
+              <a className="cta-phone" href="tel:0372613123">0372 613 123</a>
+            </div>
           </div>
         </section>
 
@@ -282,7 +285,7 @@ function App() {
                 <span className="contact-icon" aria-hidden="true">✉️</span>
                 <h3>Email</h3>
               </div>
-              <p>nguyenvanthiensangduyen@gmai.com</p>
+              <p>thienhy28011995@gmail.com</p>
             </div>
            
           </div>
