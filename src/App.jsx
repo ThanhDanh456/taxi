@@ -261,39 +261,58 @@ function App() {
             </div>
           </div>
         </section>
-
-        <section className="contact" id="contact">
-          <SectionTitle title="Liên hệ ngay" description="Hotline và thông tin địa chỉ phục vụ nhanh chóng."
-          />
-          <div className="contact-grid">
-            <div className="contact-card">
-              <div className="contact-card-header">
-                <span className="contact-icon" aria-hidden="true">📞</span>
-                <h3>Hotline</h3>
-              </div>
-              <p>0372 613 123</p>
-            </div>
-            <div className="contact-card">
-              <div className="contact-card-header">
-                <span className="contact-icon" aria-hidden="true">📍</span>
-                <h3>Địa chỉ</h3>
-              </div>
-              <p>Phố Nối, Hưng Yên</p>
-            </div>
-            <div className="contact-card">
-              <div className="contact-card-header">
-                <span className="contact-icon" aria-hidden="true">✉️</span>
-                <h3>Email</h3>
-              </div>
-              <p>thienhy28011995@gmail.com</p>
-            </div>
-           
-          </div>
-        </section>
       </main>
 
       <footer className="footer">
-        <p>Taxi Hưng Yên © 2026 — Uy tín, nhanh chóng, giá tốt.</p>
+        <div className="footer-content">
+          <div className="footer-section footer-about">
+            <div className="footer-brand">
+              <img src={taxiIcon} alt="Taxi logo" />
+              <h3>TAXI HƯƠNG YÊN</h3>
+            </div>
+            <p>TAXI HƯƠNG YÊN là thương hiệu taxi giá rẻ, chính hãng uy tín, chuyên cung cấp dịch vụ đưa đón khách nhanh chóng, an toàn và chuyên nghiệp. Với dòng xe đời mới, sạch sẽ, nội thất hiện đại cùng đội ngũ tài xế lịch sự, giàu kinh nghiệm, chúng tôi luôn sẵn sàng phục vụ khách hàng 24/7 cho mọi nhu cầu .</p>
+           <p>TAXI HƯƠNG YÊN cam kết mang đến trải nghiệm thoải mái với mức giá hợp lý, phục vụ đúng giờ và tận tâm. Chúng tôi không ngừng nâng cao chất lượng dịch vụ, bảo dưỡng xe thường xuyên và hỗ trợ đặt xe nhanh chóng nhằm đem lại sự hài lòng và an tâm trên mọi hành trình của quý khách.</p>
+            
+          </div>
+
+          <div className="footer-section footer-contact">
+            <h3>LIÊN HỆ</h3>
+            <ul className="footer-contact-list">
+              <li>
+                <span className="contact-icon-footer">📍</span>
+                <span>Địa chỉ: Phố Nối, Hưng Yên</span>
+              </li>
+              <li>
+                <span className="contact-icon-footer">☎️</span>
+                <span>Hotline: 0372613123</span>
+              </li>
+              <li>
+                <span className="contact-icon-footer">✉️</span>
+                <span>Email: thienhy28011995@gmail.com</span>
+              </li>
+              <div className="footer-hotline">
+              <span className="hotline-label">HOTLINE:</span>
+              <a href="tel:0372613123" className="hotline-number">0372 613 123</a>
+            </div>
+            </ul>
+          </div>
+
+          <div className="footer-section footer-form">
+            <h3>VỊ TRÍ</h3>
+            <div className="footer-map">
+              <iframe
+                title="Bản đồ Hưng Yên Footer"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15313.921809529507!2d106.12379477368178!3d20.977107783601228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31347f4e5fce45b7%3A0xe31710ceec95d05f!2zSOG7kyBZw6puIELhuq1uIEjhuqlu!5e0!3m2!1svi!2s!4v1706100000000!5m2!1svi!2s"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>Taxi Hưng Yên © 2026 — Uy tín, nhanh chóng, giá tốt.</p>
+        </div>
       </footer>
 
       <div className="contact-badges">
@@ -331,7 +350,10 @@ function App() {
   />
 </a>
         <a className="hotline-widget" href="tel:0372613123" aria-label="Hotline Taxi Hưng Yên">
-          <span aria-hidden="true">☎</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" fill="#ffffff"/>
+          </svg>
+          <span className="hotline-text">0372 613 123</span>
         </a>
       </div>
     </div>

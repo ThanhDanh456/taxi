@@ -1,0 +1,590 @@
+/* Mobile Optimizations */
+
+@media (max-width: 720px) {
+  body {
+    font-size: 16px;
+  }
+
+  .topbar-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 10px 16px;
+    min-height: 60px;
+    position: relative;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    transition: all 0.2s;
+  }
+
+  .menu-toggle:active {
+    background: rgba(255,255,255,0.15);
+  }
+
+  .topbar-inner nav {
+    position: relative;
+  }
+
+  .topnav-links {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 220px;
+    background: var(--surface);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(15,23,42,0.2);
+    flex-direction: column;
+    gap: 6px;
+    z-index: 100;
+  }
+
+  .topnav-links li a {
+    color: var(--text);
+    padding: 12px 16px;
+    display: block;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+  }
+
+  .topnav-links li a:hover {
+    background: rgba(255, 106, 0, 0.1);
+    color: var(--accent);
+  }
+
+  .nav-toggle:checked ~ nav .topnav-links {
+    display: flex;
+  }
+
+  .brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .brand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero {
+    min-height: 450px;
+  }
+
+  .hero-inner {
+    padding: 40px 16px 36px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 6vw, 2.6rem);
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+  }
+
+  .page-shell {
+    padding: 0 16px;
+  }
+
+  .section-title h2 {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    margin-bottom: 12px;
+  }
+
+  .section-title p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .features,
+  .service-overview,
+  .cars,
+  .testimonial-section,
+  .service-area,
+  .contact,
+  .pricing,
+  .intro-service {
+    padding: 36px 0;
+  }
+
+  .pricing-card,
+  .feature-card,
+  .car-card,
+  .testimonial-card,
+  .contact-card,
+  .highlight-card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .button {
+    padding: 14px 26px;
+    font-size: 0.95rem;
+  }
+
+  .contact-badges {
+    left: 14px;
+    bottom: 14px;
+    gap: 10px;
+  }
+
+  .contact-badges .facebook-widget,
+  .contact-badges .zalo-widget {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(15,23,42,0.18);
+  }
+
+  .contact-badges .facebook-widget svg,
+  .contact-badges .zalo-widget img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hotline-widget {
+    width: auto !important;
+    min-width: 48px !important;
+    padding: 0 12px;
+    border-radius: 24px;
+    height: 48px;
+  }
+
+  .hotline-widget svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hotline-text {
+    font-size: 0.8rem;
+  }
+
+  .service-map {
+    min-height: 380px;
+    border-radius: 20px;
+  }
+
+  .testimonial-cta {
+    flex-direction: column;
+    padding: 28px 20px;
+    gap: 20px;
+  }
+
+  .cta-content {
+    text-align: center;
+  }
+
+  .cta-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cta-title {
+    font-size: 1rem;
+  }
+
+  .cta-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .cta-phone {
+    font-size: 1.4rem;
+  }
+
+  .footer {
+    padding: 48px 0 0;
+    margin-top: 48px;
+  }
+
+  .footer-content {
+    padding: 0 16px 36px;
+    gap: 36px;
+  }
+
+  .footer-bottom {
+    padding: 20px 16px;
+    font-size: 0.85rem;
+  }
+
+  .map-container {
+    height: 350px;
+    border-radius: 20px;
+  }
+
+  .footer-map {
+    height: 250px;
+  }
+
+  .footer-brand h3 {
+    font-size: 1.15rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-about p {
+    font-size: 0.9rem;
+  }
+
+  .hotline-number {
+    font-size: 1.3rem;
+  }
+
+  .footer-contact-list li {
+    font-size: 0.9rem;
+  }
+
+  .car-card-icon {
+    max-height: 200px;
+    border-radius: 16px;
+  }
+
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .feature-icon img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .testimonial-card {
+    min-height: auto;
+    padding: 22px 18px;
+  }
+
+  .testimonial-avatar {
+    width: 75px;
+    height: 75px;
+  }
+
+  .pricing-card h3,
+  .feature-card h3,
+  .car-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1.65rem;
+  }
+
+  .intro-features h3 {
+    font-size: 1.3rem;
+  }
+
+  .intro-features li {
+    font-size: 0.9rem;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .topbar-inner {
+    padding: 8px 12px;
+    min-height: 56px;
+  }
+
+  .brand {
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+  }
+
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+    left: 12px;
+  }
+
+  .menu-toggle .bar {
+    width: 18px;
+  }
+
+  .topnav-links {
+    width: 200px;
+    padding: 8px;
+  }
+
+  .topnav-links li a {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    min-height: 380px;
+  }
+
+  .hero-inner {
+    padding: 36px 12px 30px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.65rem, 5.5vw, 2.2rem);
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-description {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .page-shell {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .section-title h2 {
+    font-size: clamp(1.4rem, 4.5vw, 1.85rem);
+    margin-bottom: 10px;
+  }
+
+  .section-title p {
+    font-size: 0.85rem;
+  }
+
+  .features,
+  .service-overview,
+  .cars,
+  .testimonial-section,
+  .service-area,
+  .contact,
+  .pricing,
+  .intro-service {
+    padding: 32px 0;
+  }
+
+  .service-map {
+    min-height: 300px;
+    border-radius: 16px;
+  }
+
+  .pricing-card,
+  .feature-card,
+  .car-card,
+  .testimonial-card,
+  .contact-card,
+  .highlight-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .feature-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .feature-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .car-card-icon {
+    max-height: 170px;
+    border-radius: 14px;
+  }
+
+  .contact-badges {
+    left: 12px;
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .contact-badges .facebook-widget,
+  .contact-badges .zalo-widget {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+  }
+
+  .contact-badges .facebook-widget svg,
+  .contact-badges .zalo-widget img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hotline-widget {
+    width: auto !important;
+    min-width: 44px !important;
+    padding: 0 10px;
+    border-radius: 23px;
+    height: 44px;
+  }
+
+  .hotline-widget svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hotline-text {
+    font-size: 0.75rem;
+  }
+
+  .button {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+
+  .testimonial-cta {
+    padding: 24px 16px;
+    gap: 18px;
+  }
+
+  .cta-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cta-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cta-title {
+    font-size: 0.9rem;
+  }
+
+  .cta-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .cta-phone {
+    font-size: 1.25rem;
+  }
+
+  .testimonial-avatar {
+    width: 65px;
+    height: 65px;
+  }
+
+  .testimonial-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.85rem;
+  }
+
+  .pricing-card h3,
+  .feature-card h3,
+  .car-card h3 {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.4rem;
+  }
+
+  .footer {
+    padding: 40px 0 0;
+    margin-top: 40px;
+  }
+
+  .footer-content {
+    padding: 0 12px 32px;
+    gap: 32px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+  }
+
+  .footer-brand h3 {
+    font-size: 1.05rem;
+  }
+
+  .footer-brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-about p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+
+  .footer-hotline {
+    padding: 14px 16px;
+  }
+
+  .hotline-label {
+    font-size: 0.85rem;
+  }
+
+  .hotline-number {
+    font-size: 1.15rem;
+  }
+
+  .footer-contact-list li {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    padding: 18px 12px;
+    font-size: 0.8rem;
+  }
+
+  .map-container {
+    height: 280px;
+    border-radius: 16px;
+  }
+
+  .footer-map {
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .intro-features h3 {
+    font-size: 1.15rem;
+  }
+
+  .intro-features li {
+    font-size: 0.85rem;
+    padding: 10px 0;
+  }
+}
